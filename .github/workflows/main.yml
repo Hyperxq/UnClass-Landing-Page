@@ -9,12 +9,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
-          packageManager: npm
           environment: Cloudflare-pages
           secrets: CLOUDFLARE_API_TOKEN
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          preCommands: npx astro build
+          preCommands: bunx astro build
           command: pages deploy ./dist --project-name=${{ secrets.CF_PAGES_PROJECT_NAME }}
