@@ -7,6 +7,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: Cloudflare-pages
     steps:
       - uses: actions/checkout@v4
       - name: Deploy
@@ -15,4 +16,4 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           packageManager: npm
           preCommands: npx astro build
-          command: pages deploy ./dist --project-name=${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy ./dist --project-name=${{ secrets.CF_PAGES_PROJECT_NAME }}
