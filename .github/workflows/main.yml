@@ -16,8 +16,7 @@ jobs:
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
-          environment: Cloudflare-pages
-          secrets: CLOUDFLARE_API_TOKEN
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           preCommands: bunx astro build
-          command: pages deploy ./dist --project-name=${{ secrets.CF_PAGES_PROJECT_NAME }}
+          command: pages deploy ./dist --project-name=${{ accountId }}
