@@ -1,8 +1,22 @@
 ---
-import { Text } from './react/Text.tsx';
+import backgroundPattern from '../assets/background-pattern.svg';
 ---
 
-<main class="bg-blue-500 grid place-content-center w-screen h-screen bg-linear-to-b from-[#0F172A] to-[#334F90]">
-  Hello world! This is the home page.
-  <Text/>
+<main class=`relative grid w-screen h-[4952px] bg-linear-to-b from-[#0F172A] to-[#334F90]`>
+  <section>
+    <h1 class="text-5xl text-center text-white">
+      <span class="text-[#00D8FF]">Unclass</span> your code.  
+    </h1>
+    <h4 class="text-2xl text-center text-white">
+      Modernize React in minutes.
+    </h4>
+    <p class="text-center text-white">Unclass is CLI that safely transforms your legacy React class components into clean, modern functional components — automatically.</p>
+  <section/>
+
+  <img class="absolute
+      inset-x-0    /* left:0; right:0 */
+      bottom-0     /* bottom:0 */
+      w-full       /* full width, or use max-w-* */
+      pointer-events-none
+      select-none" src={backgroundPattern.src}/>
 </main>
