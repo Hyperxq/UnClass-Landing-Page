@@ -1,22 +1,26 @@
 ---
 import backgroundPattern from '../assets/background-pattern.svg';
+import Header from './Header.astro';
+
 ---
 
-<main class=`relative grid w-screen h-[4952px] bg-linear-to-b from-[#0F172A] to-[#334F90]`>
-  <section>
-    <h1 class="text-5xl text-center text-white">
+<main class=`relative w-screen h-[4952px] bg-linear-to-b from-[#0F172A] to-[#334F90]`>
+  <Header/>
+  
+  <section class="flex flex-col items-center mt-[100px]">
+    <h1 class="text-7xl font-black text-center text-white">
       <span class="text-[#00D8FF]">Unclass</span> your code.  
     </h1>
-    <h4 class="text-2xl text-center text-white">
+    <h4 class="text-4xl font-black text-center text-white">
       Modernize React in minutes.
     </h4>
-    <p class="text-center text-white">Unclass is CLI that safely transforms your legacy React class components into clean, modern functional components — automatically.</p>
+    <p class="mt-[10px] text-center  w-[50vw] text-[#BCBCBC] font-medium"><span class="text-[#00D8FF]">Unclass</span> is CLI that safely transforms your legacy React class components into clean, modern functional components — automatically.</p>
   <section/>
 
   <img class="absolute
-      inset-x-0    /* left:0; right:0 */
-      bottom-0     /* bottom:0 */
-      w-full       /* full width, or use max-w-* */
+      inset-x-0 
+      bottom-0
+      w-full
       pointer-events-none
-      select-none" src={backgroundPattern.src}/>
+      select-none -z-1" src={backgroundPattern.src}/>
 </main>

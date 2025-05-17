@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "astro-seo": "^0.8.4",
-    "sass": "^1.88.0"
+    "sass": "^1.88.0",
+    "tw-animate-css": "^1.2.9"
   }
 }
