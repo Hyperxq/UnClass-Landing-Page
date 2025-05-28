@@ -1,4 +1,5 @@
 ---
+import backgroundPattern from '../assets/background-pattern.svg';
 import "../styles/global.css";
 ---
 <!doctype html>
@@ -10,8 +11,14 @@ import "../styles/global.css";
 		<meta name="generator" content={Astro.generator} />
 		<title>UnClass</title>
 	</head>
-	<body>
+	<body class="grid justify-center relative w-screen h-[4952px] bg-linear-to-b from-[#0F172A] to-[#334F90]">
 		<slot />
+		  <img class="absolute
+      inset-x-0 
+      bottom-0
+      w-full
+      pointer-events-none
+      select-none -z-1" src={backgroundPattern.src}/>
 	</body>
 </html>
 
@@ -19,7 +26,5 @@ import "../styles/global.css";
 	html,
 	body {
 		margin: 0;
-		width: 100%;
-		height: 100%;
 	}
 </style>

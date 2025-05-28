@@ -1,12 +1,10 @@
 ---
-import backgroundPattern from '../assets/background-pattern.svg';
 import Header from './Header.astro';
 
 ---
 
-<main class=`relative w-screen h-[4952px] bg-linear-to-b from-[#0F172A] to-[#334F90]`>
+<main class=`w-[1440px]`>
   <Header/>
-  
   <section class="flex flex-col items-center mt-[100px]">
     <h1 class="text-7xl font-black text-center text-white">
       <span class="text-[#00D8FF]">Unclass</span> your code.  
@@ -17,10 +15,5 @@ import Header from './Header.astro';
     <p class="mt-[10px] text-center  w-[50vw] text-[#BCBCBC] font-medium"><span class="text-[#00D8FF]">Unclass</span> is CLI that safely transforms your legacy React class components into clean, modern functional components — automatically.</p>
   <section/>
 
-  <img class="absolute
-      inset-x-0 
-      bottom-0
-      w-full
-      pointer-events-none
-      select-none -z-1" src={backgroundPattern.src}/>
+
 </main>
